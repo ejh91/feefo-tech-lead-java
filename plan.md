@@ -48,3 +48,6 @@ I want to split this task up, so that a Normaliser is composed of:
   * IdentityFallback - returns the input string
 
 Each concrete implementation should have unit tests, but I want to get the skeleton in place first and make sure the structure is sound.
+
+N.B. some of these calculations would be vulnerable to floating point problems - e.g. 0.3d - 0.1d is calculated as less than 0.2d
+ - BigDecimal would be an alternative to handle this, but I'm going to stick with the basic double for now

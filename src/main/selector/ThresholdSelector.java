@@ -18,7 +18,7 @@ public record ThresholdSelector(
                 return next;
             }
 
-            return NormalValueProbability.PROBABILITY_ASC.max(current, next);
+            return NormalValueProbability.PROBABILITY_ASC.compare(current, next) >= 0 ? current : next;
         });
     }
 }
